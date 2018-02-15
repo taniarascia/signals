@@ -439,7 +439,7 @@ export const flashcardContent = [
     "middle": "red flashing",
     "bottom": "dark",
     "plate": false
-  },
+  }, 
   {
     "name": "restricting",
     "top": "red",
