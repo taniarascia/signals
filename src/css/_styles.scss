@@ -1,0 +1,158 @@
+$primary: #177DF8;
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: #444;
+  background: #F7F9FD;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 .5rem;
+}
+
+.question-container {
+  background: white;
+  color: $primary;
+  font-size: 1.3rem;
+  font-weight: 800;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+}
+
+.answer {
+  background: white;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+}
+
+.name {
+  color: $primary;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+section {
+  margin: 1rem 0;
+}
+
+button {
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  margin: 0 5px;
+  border: 0;
+  background: $primary;
+  color: white;
+  font-size: 1.1rem;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+}
+
+.green {
+  border: 2px solid #333;
+  background: #3AA757;
+}
+
+.yellow {
+  border: 2px solid #333;
+  background: #F8BB2D;
+}
+
+.red {
+  border: 2px solid #333;
+  background: #E7443C;
+}
+
+.dark {
+  border: 2px solid #333;
+  background: #333;
+}
+
+.lunar {
+  border: 2px solid #333;
+  background: #999;
+}
+
+.none {
+  background: white;
+  border: 2px solid white;
+}
+
+.yes-plate {
+  margin-top: 25px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid #333;
+}
+
+.flashing {
+  animation: blinker .7s ease-in-out infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .question-container {
+    font-size: 1.8rem;
+    padding: 2rem;
+    margin: 2rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+  .answer {
+    font-size: 1.3rem;
+    padding: 2rem;
+    margin: 2rem;
+  }
+  .name {
+    font-size: 1.8rem;
+  }
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+  }
+  section {
+    margin: 2rem 0;
+  }
+}
