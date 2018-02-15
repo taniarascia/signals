@@ -12,7 +12,7 @@ body {
 .container {
   max-width: 780px;
   margin: 0 auto;
-  padding: 0 .5rem; }
+  padding: 0 .25rem; }
 
 .question-container {
   background: white;
@@ -21,7 +21,7 @@ body {
   font-weight: 800;
   border-radius: 6px;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 1rem 0;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07); }
 
 .answer {
@@ -29,7 +29,7 @@ body {
   font-size: 1.1rem;
   border-radius: 6px;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 1rem 0;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07); }
 
 .name {
@@ -39,7 +39,7 @@ body {
   margin: 0; }
 
 section {
-  margin: 1rem 0; }
+  margin: 1rem 0 0; }
 
 button {
   border-radius: 5px;
@@ -110,17 +110,10 @@ button {
     opacity: 0; } }
 @media screen and (min-width: 600px) {
   .question-container {
-    font-size: 1.8rem;
-    padding: 1rem;
-    margin: 1rem; }
-
-  .container {
-    padding: 1rem; }
+    font-size: 1.8rem; }
 
   .answer {
-    font-size: 1.3rem;
-    padding: 1rem;
-    margin: 1rem; }
+    font-size: 1.3rem; }
 
   .name {
     font-size: 1.8rem; }

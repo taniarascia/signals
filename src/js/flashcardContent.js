@@ -4,55 +4,55 @@ export const flashcardContent = [
     "top": "green",
     "middle": "none",
     "bottom": "none",
-    "plate": "FALSE"
+    "plate": false
   },
   {
     "name": "clear",
     "top": "green",
     "middle": "red",
     "bottom": "none",
-    "plate": "FALSE"
+    "plate": false
   },
   {
-    "name": "clear",
+    "name": "clear", 
     "top": "green",
     "middle": "red",
     "bottom": "red",
-    "plate": "FALSE"
+    "plate": false
   },
   {
     "name": "clear",
     "top": "green",
     "middle": "dark",
     "bottom": "none",
-    "plate": "FALSE"
+    "plate": false
   },
   {
     "name": "clear",
     "top": "green",
     "middle": "dark",
     "bottom": "dark",
-    "plate": "FALSE"
+    "plate": false
   },
   {
     "name": "clear",
     "top": "green",
     "middle": "dark",
     "bottom": "red",
-    "plate": "FALSE"
+    "plate": false
   },
   {
     "name": "clear",
     "top": "green",
     "middle": "red",
     "bottom": "dark",
-    "plate": "FALSE"
+    "plate": false
   },
   {
     "name": "approach limited",
     "top": "yellow",
     "middle": "green flashing",
     "bottom": "none",
-    "plate": "FALSE"
+    "plate": false
   }
 ];
