@@ -16,9 +16,6 @@ body {
 
 .question-container {
   background: white;
-  color: #177DF8;
-  font-size: 1.3rem;
-  font-weight: 800;
   border-radius: 6px;
   padding: 1rem;
   margin: 1rem 1rem 0;
@@ -96,11 +93,15 @@ button {
   background: white;
   border: 2px solid white; }
 
+.plate {
+  color: white; }
+
 .yes-plate {
   margin-top: 25px;
   width: 75px;
   height: 40px;
-  border: 2px solid #333; }
+  border: 2px solid #333;
+  color: #333; }
 
 .flashing {
   animation: blinker .7s ease-in-out infinite; }
