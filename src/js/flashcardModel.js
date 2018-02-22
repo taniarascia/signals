@@ -1,6 +1,6 @@
 import {
   flashcardContent
-} from './flashcardContent.js';
+} from './up.js';
 
 class FlashcardModel {
   constructor() {
@@ -15,9 +15,7 @@ class FlashcardModel {
   }
 
   addIndexToOrderArray(number, action) {
-    if (action != 'back') {
-      this.orderArray.push(number);
-    }
+    this.orderArray.push(number);
     return Promise.resolve(true);
   }
 
@@ -76,6 +74,7 @@ class FlashcardModel {
           break;
 
         default:
+          description = "";  
           break;
       }
 
@@ -83,35 +82,30 @@ class FlashcardModel {
       const middle = card.middle;
       const bottom = card.bottom;
       const plate = card.plate;
+      const c_plate = card.c_plate;
       const name = card.name.toUpperCase();
 
       $('.circle').removeClass('green red yellow none dark lunar flashing');
-      $('.plate').removeClass('yes-plate no-plate');
+      $('.plate').removeClass('yes-plate');
+      $('.c-plate').removeClass('yes-c-plate');
       $('.top').addClass(top);
       $('.middle').addClass(middle);
       $('.bottom').addClass(bottom);
+
       if (plate) {
         $('.plate').addClass('yes-plate');
       }
+      if (c_plate) {
+        $('.c-plate').addClass('yes-c-plate');
+      }
+      
       $('.answer').html(
         `<h1 class="name">${name}</h1>
         <p>${description}</p>`
       ).hide();
     }
 
-    if (action === 'back') {
-      if (this.orderArray.length > 1) {
-        this.orderArray.pop();
-        const previousIndex = this.orderArray[this.orderArray.length - 1];
-        setQandA(previousIndex);
-      } else {
-        $('.back').hide();
-      }
-
-    } else {
-      setQandA(this.randomIndex);
-      $('.back').show();
-    }
+    setQandA(this.randomIndex);
 
     return Promise.resolve(true);
   }

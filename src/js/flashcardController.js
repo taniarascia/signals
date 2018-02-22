@@ -1,13 +1,13 @@
 import {
   flashcardContent
-} from './flashcardContent.js';
+} from './up.js';
 import model from './flashcardModel.js';
 
 class FlashcardController {
   constructor(model) {}
 
   render(model, action) {
-
+ 
     model.generateRandomNum()
       .then(number => {
         return model.addIndexToOrderArray(number, action);

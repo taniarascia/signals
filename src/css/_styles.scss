@@ -1,58 +1,51 @@
 $primary: #177DF8;
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #444;
   background: #F7F9FD;
   text-align: center;
   box-sizing: border-box;
 }
 
+h1 {
+  margin: 1rem 0;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
 .container {
   max-width: 780px;
   margin: 0 auto;
-  padding: 0 .25rem; 
+  padding: 0 15px;
 }
 
 .question-container {
-  background: white;
-  border-radius: 6px;
-  padding: 1rem;
   margin: 1rem 1rem 0;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
 }
 
 .answer {
-  background: white;
   font-size: 1rem;
-  border-radius: 6px;
-  padding: 1rem;
-  margin: 1rem 1rem 0;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
 }
 
 .name {
-  color: $primary;
-  font-weight: 800;
-  font-size: 1.4rem;
-  margin: 0;
-} 
-
-section {
-  margin: 1rem 0 0;
+  padding-top: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 button {
-  border-radius: 5px;
-  padding: 1rem 1.5rem;
-  margin: 0 5px;
+  display: inline-block;
+  padding: 1rem;
   border: 0;
   background: $primary;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
   box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
   &:hover {
     cursor: pointer;
@@ -61,10 +54,52 @@ button {
 
 #controls {
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
   bottom: 10px;
-  left: 10px;
   width: 100%;
-} 
+}
+
+#controls > button {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#controls > a {
+  display: block;
+  margin: 0 10px;
+}
+
+.section {
+  padding: 1rem 0;
+}
+
+.railroads {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-apart;
+  align-items: center;
+  div {
+    background: white;
+    padding: 1rem;
+    margin: 10px 0;
+    border: 1px solid #dee0e3;
+    flex: 1;
+    &:hover {
+      border: 1px solid #acaeb1;
+    }
+  }
+  a {
+    display: block;
+  }
+  img {
+    max-width: 300px;
+    display: block;
+  }
+}
 
 .question {
   display: flex;
@@ -74,26 +109,26 @@ button {
 }
 
 .circle {
-  border: 2px solid white;
+  border: 2px solid transparent;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  background-color: white;
+  background-color: transparent;
 }
 
 .green {
   border: 2px solid #333;
-  background: #3AA757;
+  background: #45E078;
 }
 
 .yellow {
   border: 2px solid #333;
-  background: #F8BB2D;
+  background: #FDF035;
 }
 
 .red {
   border: 2px solid #333;
-  background: #E7443C;
+  background: #FC4F52;
 }
 
 .dark {
@@ -107,47 +142,53 @@ button {
 }
 
 .none {
-  background: white;
-  border: 2px solid white;
+  background: #F7F9FD;
+  border: 2px solid #F7F9FD;
 }
 
 .plate {
-  color: white;
+  color: transparent;
+}
+
+.c-plate {
+  color: transparent;
 }
 
 .yes-plate {
   margin-top: 25px;
   width: 75px;
-  height: 40px;
   border: 2px solid #333;
   color: #333;
+}
+
+.yes-c-plate {
+  margin-top: 25px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #333;
+  color: #333;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .flashing {
   animation: blinker .7s ease-in-out infinite;
 }
 
+.responsive-image {
+  display: block;
+  max-width: 120px;
+  max-height: 40px;
+  height: auto;
+  border: 1px solid #dee0e3;
+  padding: 5px;
+  background: white;
+}
+
 @keyframes blinker {
   50% {
     opacity: 0;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .question-container {
-    font-size: 1.8rem;
-  }
-  .answer {
-    font-size: 1.2rem;
-  }
-  .name {
-    font-size: 1.8rem;
-  }
-  button {
-    padding: 1rem 1rem;
-    font-size: 1.3rem;
-  }
-  section {
-    margin: 1rem 0;
   }
 }
