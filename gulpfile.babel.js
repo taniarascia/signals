@@ -6,10 +6,10 @@ import sass from 'gulp-ruby-sass';
 gulp.task('default', ['browserify', 'sass', 'watch']);
 
 gulp.task('browserify', () => {
-  return browserify('src/js/app.js')
+  return browserify('src/js/cn.js')
     .transform('babelify')
     .bundle()
-    .pipe(source('bundle.js'))
+    .pipe(source('bundle-cn.js'))
     .pipe(gulp.dest('dist'));
 });
 

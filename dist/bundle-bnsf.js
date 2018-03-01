@@ -1,25 +1,25 @@
 (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
 "use strict";
 
-var _flashcardController = require("./flashcardController.js");
+var _flashcardController = require("./bnsf/flashcardController.js");
 
 var _flashcardController2 = _interopRequireDefault(_flashcardController);
 
-var _flashcardModel = require("./flashcardModel.js");
+var _flashcardModel = require("./bnsf/flashcardModel.js");
 
 var _flashcardModel2 = _interopRequireDefault(_flashcardModel);
 
-var _flashcardView = require("./flashcardView.js");
+var _flashcardView = require("./bnsf/flashcardView.js");
 
 var _flashcardView2 = _interopRequireDefault(_flashcardView);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log("bnsf");
+console.log("BNSF Version 2.0");
 
 _flashcardController2.default.render(_flashcardModel2.default);
 
-},{"./flashcardController.js":3,"./flashcardModel.js":4,"./flashcardView.js":5}],2:[function(require,module,exports){
+},{"./bnsf/flashcardController.js":3,"./bnsf/flashcardModel.js":4,"./bnsf/flashcardView.js":5}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -233,7 +233,7 @@ var flashcardContent = exports.flashcardContent = [{
   "name": "diverging clear",
   "top": "red",
   "middle": "red",
-  "bottom": "gree",
+  "bottom": "green",
   "plate": false
 }, {
   "name": "diverging clear",
@@ -568,23 +568,23 @@ var FlashcardModel = function () {
             break;
 
           case "approach limited":
-            description = "Proceed prepared to pass next signal not exceeding 60 MPH and be prepared to enter diverging route at prescribed speed.";
+            description = "Proceed prepared to pass next signal not exceeding 60 mph and be prepared to enter diverging route at prescribed speed.";
             break;
 
           case "advance approach":
-            description = "Proceed prepared to pass next signal not exceeding 50 MPH and be prepared to enter diverging route at prescribed speed.";
+            description = "Proceed prepared to pass next signal not exceeding 50 mph and be prepared to enter diverging route at prescribed speed. ";
             break;
 
           case "approach medium":
-            description = "Proceed prepared to pass next signal not exceeding 40 MPH and be prepared to enter diverging route at prescribed speed.";
+            description = "Proceed prepared to pass next signal not exceeding 30 mph and be prepared to enter diverging route at prescribed speed.  (Note: Speed is 40 mph for passenger trains)";
             break;
 
           case "approach restricting":
-            description = "Proceed prepared to pass next signal at restricted speed.";
+            description = "Proceed prepared to pass next signal at restricted speed. ";
             break;
 
           case "approach":
-            description = "Proceed prepared to stop at next signal. Trains exceeding 30 MPH immediately reduce to that speed. (Note: Speed is 40 MPH for passenger trains).";
+            description = "Proceed prepared to stop at next signal. Trains exceeding 30MPH immediately reduce to that speed. (Note: Speed is 40 mph for passenger trains)";
             break;
 
           case "diverging clear":
@@ -596,15 +596,15 @@ var FlashcardModel = function () {
             break;
 
           case "diverging approach medium":
-            description = "Proceed on diverging route not exceeding prescribed speed through turnout prepared to pass next signal not exceeding 35 MPH.";
+            description = "Proceed on diverging route not exceeding prescribed speed through turnout prepared to pass next signal not exceeding 35 MPH";
             break;
 
           case "diverging approach":
-            description = "Proceed on diverging route not exceeding prescribed speed through turnout; approach next signal prepared to stop. Trains exceeding 30 MPH immediately reduce to that speed. (Note: Speed is 40 MPH for passenger trains.)";
+            description = "Proceed on diverging route not exceeding prescribed speed through turnout; approach next signal prepared to stop. Trains exceeding 30MPH immediately reduce to that speed. (Note: Speed is 40 mph for passenger trains.)";
             break;
 
           case "restricting":
-            description = "Proceed at restricted speed.";
+            description = "Proceed at restricted speed. ";
             break;
 
           case "stop":
@@ -612,6 +612,7 @@ var FlashcardModel = function () {
             break;
 
           default:
+            description = "";
             break;
         }
 
@@ -619,16 +620,21 @@ var FlashcardModel = function () {
         var middle = card.middle;
         var bottom = card.bottom;
         var plate = card.plate;
+        var c_plate = card.c_plate;
         var name = card.name.toUpperCase();
 
         $('.circle').removeClass('green red yellow none dark lunar flashing');
-        $('.plate').removeClass('yes-plate no-plate');
+        $('.plate').removeClass('yes-plate');
+        $('.c-plate').removeClass('yes-c-plate');
         $('.top').addClass(top);
         $('.middle').addClass(middle);
         $('.bottom').addClass(bottom);
 
         if (plate) {
           $('.plate').addClass('yes-plate');
+        }
+        if (c_plate) {
+          $('.c-plate').addClass('yes-c-plate');
         }
 
         $('.answer').html("<h1 class=\"name\">" + name + "</h1>\n        <p>" + description + "</p>").hide();

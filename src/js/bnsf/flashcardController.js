@@ -1,6 +1,6 @@
 import {
   flashcardContent
-} from './up.js';
+} from './flashcardContent.js';
 import model from './flashcardModel.js';
 
 class FlashcardController {

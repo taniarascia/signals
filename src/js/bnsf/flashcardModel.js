@@ -1,6 +1,6 @@
 import {
   flashcardContent
-} from './up.js';
+} from './flashcardContent.js';
 
 class FlashcardModel {
   constructor() {
@@ -30,23 +30,23 @@ class FlashcardModel {
           break;
 
         case "approach limited":
-          description = "Proceed prepared to pass next signal not exceeding 60 MPH and be prepared to enter diverging route at prescribed speed.";
+          description = "Proceed prepared to pass next signal not exceeding 60 mph and be prepared to enter diverging route at prescribed speed.";
           break;
 
         case "advance approach":
-          description = "Proceed prepared to pass next signal not exceeding 50 MPH and be prepared to enter diverging route at prescribed speed.";
+          description = "Proceed prepared to pass next signal not exceeding 50 mph and be prepared to enter diverging route at prescribed speed. ";
           break;
 
         case "approach medium":
-          description = "Proceed prepared to pass next signal not exceeding 40 MPH and be prepared to enter diverging route at prescribed speed.";
+          description = "Proceed prepared to pass next signal not exceeding 30 mph and be prepared to enter diverging route at prescribed speed.  (Note: Speed is 40 mph for passenger trains)";
           break;
 
         case "approach restricting":
-          description = "Proceed prepared to pass next signal at restricted speed.";
+          description = "Proceed prepared to pass next signal at restricted speed. ";
           break;
 
         case "approach":
-          description = "Proceed prepared to stop at next signal. Trains exceeding 30 MPH immediately reduce to that speed. (Note: Speed is 40 MPH for passenger trains).";
+          description = "Proceed prepared to stop at next signal. Trains exceeding 30MPH immediately reduce to that speed. (Note: Speed is 40 mph for passenger trains)";
           break;
 
         case "diverging clear":
@@ -58,15 +58,15 @@ class FlashcardModel {
           break;
 
         case "diverging approach medium":
-          description = "Proceed on diverging route not exceeding prescribed speed through turnout prepared to pass next signal not exceeding 35 MPH.";
+          description = "Proceed on diverging route not exceeding prescribed speed through turnout prepared to pass next signal not exceeding 35 MPH";
           break;
 
         case "diverging approach":
-          description = "Proceed on diverging route not exceeding prescribed speed through turnout; approach next signal prepared to stop. Trains exceeding 30 MPH immediately reduce to that speed. (Note: Speed is 40 MPH for passenger trains.)";
+          description = "Proceed on diverging route not exceeding prescribed speed through turnout; approach next signal prepared to stop. Trains exceeding 30MPH immediately reduce to that speed. (Note: Speed is 40 mph for passenger trains.)";
           break;
 
         case "restricting":
-          description = "Proceed at restricted speed.";
+          description = "Proceed at restricted speed. ";
           break;
 
         case "stop":

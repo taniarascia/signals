@@ -65,13 +65,13 @@ button {
 .railroads {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-apart;
   align-items: center; }
   .railroads div {
     background: white;
     padding: 1rem;
-    margin: 10px 0;
+    margin: 5px;
     border: 1px solid #dee0e3;
     flex: 1; }
     .railroads div:hover {
@@ -79,8 +79,9 @@ button {
   .railroads a {
     display: block; }
   .railroads img {
-    max-width: 300px;
-    display: block; }
+    max-height: 80px;
+    display: block;
+    margin: 0 auto; }
 
 .question {
   display: flex;
